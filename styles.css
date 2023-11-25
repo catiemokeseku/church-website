@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+} */
+
 *{
     font-family: 'Montserrat', sans-serif;
 }
@@ -8,13 +17,14 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
 header {
-    background-color: #250884; /* Bootstrap dark background color */
+    background-color: #250884; 
     padding: 10px;
-    color: #ffffff; /* Bootstrap light text color */
+    color: #ffffff; 
     text-align: center;
   }
 
@@ -26,13 +36,13 @@ header {
 
   nav a {
     text-decoration: none;
-    color: #ffffff; /* Bootstrap light text color */
+    color: #ffffff; 
     padding: 10px;
     transition: background-color 0.3s;
   }
 
   nav a:hover {
-    background-color: rgb(223, 223, 20); /* Bootstrap darker background color on hover */
+    background-color: rgb(223, 223, 20); 
     font-weight: 600;
     color: #250884;
     border-radius: 0.2em;
@@ -143,22 +153,6 @@ nav a {
     }
 }
 
-/* .hero::before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(to bottom ), url('images/Image\ 2023-11-18\ at\ 13.04.35_841652c5.jpg');
-    font-family: Arial, sans-serif;
-    display: flex;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
-
-
 
 .about {
     padding: 50px 0;
@@ -251,7 +245,6 @@ nav a {
     font-weight: bold;
 }
 
-/* Sermons Section */
 .sermons {
     padding: 50px 0;
     text-align: center;
@@ -283,7 +276,6 @@ nav a {
     text-decoration: none;
 }
 
-/* Ministries Section */
 .ministries {
     padding: 50px 0;
     text-align: center;
@@ -325,7 +317,6 @@ nav a {
     text-decoration: none;
 }
 
-/* Contact Section */
 .contact {
     padding: 50px 0;
     text-align: center;
@@ -368,8 +359,6 @@ nav a {
     cursor: pointer;
 }
 
-
-/* Contact and Footer Sections */
 .contact {
     padding: 50px 0;
     text-align: center;
@@ -386,7 +375,6 @@ nav a {
     margin: 0 auto;
 }
 
-/* Social Icons */
 .social-icons {
     margin-top: 20px;
 }
@@ -401,10 +389,92 @@ nav a {
     height: 30px;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 20px 0;
     background-color: #333;
     color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+}
+
+
+.hero {
+    height: 80vh;
+    background: linear-gradient(to top, rgba(41, 41, 41, 0), rgba(223, 223, 20, 0.526)), url('images/Image\ 2023-11-18\ at\ 13.04.35_841652c5.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333;
+}
+
+.hero-content {
+    margin: 3em auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.hero h1,
+.hero h2 {
+    font-size: 3em;
+    opacity: 1;
+}
+
+.hero p {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.cta-button {
+    width: 100%; 
+    max-width: 200px; 
+    margin-top: 1.5em;
+}
+
+@media (max-width: 480px) {
+    /* Adjustments for screens up to 480px wide */
+
+    /* Header Styles */
+    nav a {
+        padding: 5px; /* Decrease padding for smaller screens */
+    }
+
+    /* Hero Styles */
+    .hero h1,
+    .hero h2 {
+        font-size: 1.2em; /* Decrease font size for smaller screens */
+    }
+
+    .hero p {
+        font-size: 1em; /* Decrease font size for smaller screens */
+    }
+
+    .cta-button {
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .hero {
+        height: 70vh;
+        background: linear-gradient(to top, rgba(41, 41, 41, 0), rgba(223, 223, 20, 0.526)), url('images/Image\ 2023-11-18\ at\ 13.04.35_841652c5.jpg');
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #333;
+    }
+
+    /* Other Section Styles */
+    /* Add your styles for other sections here */
 }
