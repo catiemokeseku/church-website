@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #250884; /* Bootstrap dark background color */
+    padding: 10px;
+    color: #ffffff; /* Bootstrap light text color */
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #ffffff; /* Bootstrap light text color */
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+
+  nav a:hover {
+    background-color: rgb(223, 223, 20); /* Bootstrap darker background color on hover */
+    font-weight: 600;
+    color: #250884;
+    border-radius: 0.2em;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero {
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    background: linear-gradient(to top, rgba(41, 41, 41, 0),  rgba(223, 223, 20, 0.526)), url('images/Image\ 2023-11-18\ at\ 13.04.35_841652c5.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333;
+    
+}
+
+.hero-content {
+    margin: 3em auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+
+
+.hero h1 {
+    font-size: 3.6em;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 3em;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 400;
+}
+
+.cta-button {
+    width: 5em;
+    height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: navy;
+    color: #fff;
+    margin-top: 1.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero h1,
+.hero h2{
+    font-size: 0;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: navy;
+    color: #fff;
+    margin-top: 1.5em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    to {
+        font-size:3.6em;
+        opacity: 1;
+    }
+}
+
+/* .hero::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to bottom ), url('images/Image\ 2023-11-18\ at\ 13.04.35_841652c5.jpg');
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+
+
+
+.about {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.about h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.services {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.services h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.service-images, .evangelism-images, .youth-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 20px; 
+
+}
+
+.service-images img, .evangelism-images img, .youth-images img {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.service-list {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.services p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.services h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.events {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.events h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.events h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.events p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.event-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.event-list li {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.event-date {
+    font-weight: bold;
+}
+
+/* Sermons Section */
+.sermons {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.sermons h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.sermon-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sermon-list li {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.sermon-link {
+    display: inline-block;
+    background-color: navy;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+/* Ministries Section */
+.ministries {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.ministries h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.ministries h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.ministries p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.ministry-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.ministry-list li {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.ministry-link {
+    display: inline-block;
+    background-color: navy;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.submit-button {
+    display: inline-block;
+    background-color: navy;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Contact and Footer Sections */
+.contact {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
